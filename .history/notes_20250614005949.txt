@@ -1,0 +1,34 @@
+# Project setup
+- created pthon virtual environment
+- created backend-drf folder
+- created frontend-react folder
+- activated environment
+- moved to backend directory and installed django using pip
+- created project (django-admin startproject stock_prediction_main .) 
+- ran server
+
+- created react project and running react server
+- cleaned the frontend default files environment to startup fresh
+
+- pip install python-decouple (for handling .env file)
+- https://djecrety.ir/ -> for better SECRET_KEY generation
+- set secret key and debug using decouple config style
+- https://www.toptal.com/developers/gitignore -> for generating boiler context for .gitignore file based on project tech stacks
+
+- git setup from root directory
+- project setup done.
+
+
+# Frontend Setup
+- Added bootstrap cdn
+- Added bootstrap js bundle
+- added custom css file to assets
+
+- added react homepage 
+
+# Backend setup
+- migrated default tables
+- created super user
+    * djangoadmin - alammahin@gmail.com - ktigeradmin
+- installed drf
+
