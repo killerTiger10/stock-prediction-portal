@@ -1,0 +1,13 @@
+# Project setup
+- created pthon virtual environment
+- created backend-drf folder
+- created frontend-react folder
+- activated environment
+- moved to backend directory and installed django using pip
+- created project (django-admin startproject stock_prediction_main .) 
+- ran server
+
+- created react project and running react server
+- cleaned the frontend default files environment to startup fresh
+
+- pip install python-decouple (for handling .env file)
