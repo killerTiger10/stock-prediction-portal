@@ -10,9 +10,9 @@ const Header = () => {
           Stock Prediction Portal
         </Link>
         <div>
-          <Button text="Login" class="btn-outline-info" url="/login" />
+          <Button text="Login" class="btn-outline-info" />
           &nbsp;
-          <Button text="Register" class="btn-info" url="/register" />
+          <Button text="Register" class="btn-info" />
         </div>
       </nav>
     </>

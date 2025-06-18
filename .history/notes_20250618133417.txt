@@ -1,0 +1,55 @@
+# Project Setup
+- created pthon virtual environment
+- created backend-drf folder
+- created frontend-react folder
+- activated environment
+- moved to backend directory and installed django using pip
+- created project (django-admin startproject stock_prediction_main .) 
+- ran server
+
+- created react project and running react server
+- cleaned the frontend default files environment to startup fresh
+
+- pip install python-decouple (for handling .env file)
+- https://djecrety.ir/ -> for better SECRET_KEY generation
+- set secret key and debug using decouple config style
+- https://www.toptal.com/developers/gitignore -> for generating boiler context for .gitignore file based on project tech stacks
+
+- git setup from root directory
+- project setup done.
+
+
+# Frontend Setup
+- Added bootstrap cdn
+- Added bootstrap js bundle
+- added custom css file to assets
+
+- added react homepage 
+
+# Backend Setup
+- migrated default tables
+- created super user
+    * djangoadmin - alammahin@gmail.com - ktigeradmin
+- installed drf
+- created 2 apps (one for users and other for apis)
+    * accounts - will handle registration and login views
+    * api - will handle api endpoints
+
+# Project Work
+- user serializer created
+- registration view created
+- base api endpoint created then the register url
+- created test user
+
+- created homepage
+- created register page
+- created some necessary components
+- installed react-router-dom
+- defined routes for login and register in App.jsx
+- connected fronted register page with backend register api
+- installed axios
+- async function worked for api fetch
+- configured CORS Headers and installation
+
+- registration works
+- error handling
