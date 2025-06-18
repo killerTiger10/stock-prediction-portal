@@ -1,18 +1,16 @@
 import React from "react";
 import Button from "./Button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
 
 const Header = () => {
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { isLoggedIn, setLoggedIn } = useContext(AuthContext);
+
   const handleLogout = () => {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
-    setIsLoggedIn(false);
-    console.log("Logged Out");
-    navigate("/login");
+    setLoggedIn(false);
   };
 
   return (

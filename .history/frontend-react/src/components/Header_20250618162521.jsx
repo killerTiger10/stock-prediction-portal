@@ -5,12 +5,12 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
 
 const Header = () => {
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn, setLoggedIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
-    setIsLoggedIn(false);
+    setLoggedIn(false);
     console.log("Logged Out");
     navigate("/login");
   };

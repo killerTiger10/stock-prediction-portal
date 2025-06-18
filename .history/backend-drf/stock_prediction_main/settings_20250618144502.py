@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'accounts',
     'api',
     "corsheaders",
-    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
