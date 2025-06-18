@@ -15,11 +15,7 @@ const Main = () => {
             widely used by stock analysts to inform trading and investment
             decisions.
           </p>
-          <Button
-            text="Explore Now"
-            class="btn-outline-info"
-            url="/dashboard"
-          />
+          <Button text="Explore Now" class="btn-outline-info" />
         </div>
       </div>
     </>

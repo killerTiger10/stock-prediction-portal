@@ -18,6 +18,6 @@ class ProtectedView(APIView):
     
     def get(self,request):
         response = {
-            'status': 'Request was permitted'
+            'status': 'Request'
         }
         return Response(response)

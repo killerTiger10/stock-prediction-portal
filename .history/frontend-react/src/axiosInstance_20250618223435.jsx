@@ -1,0 +1,52 @@
+import axios from "axios";
+
+// Axios instance configured with request interceptor
+
+const basURL = import.meta.env.VITE_BACKEND_BASE_API;
+const axiosInstance = axios.create({
+  baseURL: basURL,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+// Request Interceptor
+axiosInstance.interceptors.request.use(
+  function (config) {
+    const accessToken = localStorage.getItem("accessToken");
+    if (accessToken) {
+      config.headers["Authorization"] = `Bearer ${accessToken}`;
+    }
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);
+
+// Response Interceptor
+axiosInstance.interceptors.response.use(
+  function (response) {
+    return response;
+  },
+  // Handle failed responses
+  async function (error) {
+    const originalRequest = error.config;
+    if (error.response.status === 401 && !originalRequest.retry) {
+      originalRequest.retry = true;
+      const refreshToken = localStorage.getItem("refreshToken");
+      try {
+        const response = axiosInstance.post("token/refresh/", {
+          refresh: refreshToken,
+        });
+        console.log("response==> ", response.data);
+      } catch (error) {
+        return false;
+      }
+    }
+
+    return Promise.reject(error);
+  }
+);
+
+export default axiosInstance;
