@@ -26,14 +26,7 @@ function App() {
                 </PublicRoute>
               }
             />
-            <Route
-              path="/login"
-              element={
-                <PublicRoute>
-                  <Login />
-                </PublicRoute>
-              }
-            />
+            <Route path="/login" element={<Login />} />
             <Route
               path="/dashboard"
               element={

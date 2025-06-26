@@ -91,31 +91,28 @@ const Dashboard = () => {
           </div>
 
           {/* Print prediction plots */}
-
-          {prediction && (
-            <div className="prediction mt-5">
-              <div className="p-3">
-                {plot && <img src={plot} style={{ maxWidth: "100%" }} />}
-              </div>
-              <div className="p-3">
-                {ma100 && <img src={ma100} style={{ maxWidth: "100%" }} />}
-              </div>
-              <div className="p-3">
-                {ma200 && <img src={ma200} style={{ maxWidth: "100%" }} />}
-              </div>
-              <div className="p-3">
-                {prediction && (
-                  <img src={prediction} style={{ maxWidth: "100%" }} />
-                )}
-              </div>
-              <div className="text-light p-3">
-                <h4>Model Evaluation</h4>
-                <p>Mean Squared Error (MSE): {mse}</p>
-                <p>Root Mean Squared Error (RMSE): {rmse}</p>
-                <p>R-Squared: {r2}</p>
-              </div>
+          <div className="prediction mt-5">
+            <div className="p-3">
+              {plot && <img src={plot} style={{ maxWidth: "100%" }} />}
             </div>
-          )}
+            <div className="p-3">
+              {ma100 && <img src={ma100} style={{ maxWidth: "100%" }} />}
+            </div>
+            <div className="p-3">
+              {ma200 && <img src={ma200} style={{ maxWidth: "100%" }} />}
+            </div>
+            <div className="p-3">
+              {prediction && (
+                <img src={prediction} style={{ maxWidth: "100%" }} />
+              )}
+            </div>
+            <div className="text-light p-3">
+              <h4>Model Evaluation</h4>
+              <p>Mean Squared Error (MSE): {mse}</p>
+              <p>Root Mean Squared Error (RMSE): {rmse}</p>
+              <p>R-Squared: {r2}</p>
+            </div>
+          </div>
         </div>
       </div>
       ;

@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import AuthProvider from "./AuthProvider";
 import Dashboard from "./components/dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
-import PublicRoute from "./PublicRoute";
+import PublicRoute from "./components/PublicRoute";
 function App() {
   return (
     <>
@@ -34,14 +34,14 @@ function App() {
                 </PublicRoute>
               }
             />
-            <Route
+            {/* <Route
               path="/dashboard"
               element={
                 <PrivateRoute>
                   <Dashboard />
                 </PrivateRoute>
               }
-            />
+            /> */}
           </Routes>
           <Footer />
         </BrowserRouter>

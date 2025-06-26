@@ -13,7 +13,6 @@ from django.conf import settings
 from .utils import save_plot
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import load_model
-from sklearn.metrics import mean_squared_error, r2_score
 
 # Create your views here.
 
@@ -114,23 +113,10 @@ class StockPredictionAPIView(APIView):
             plot_img_path = f'{ticker}_final_prediction_plot.png'
             plot_prediction = save_plot(plot_img_path)
             
-            # Model Evaluation
-            # Mean Squared Error (MSE)
-            mse = mean_squared_error(y_test, y_predicted)
-            
-            # Root Mean Standard Error (RMSE)
-            rmse = np.sqrt(mse)
-
-            # R-Squared
-            r2 = r2_score(y_test, y_predicted)
-            
             return Response({
                 'status': 'success', 
                 'plot_img': plot_img,
                 'plot_100_dma_img': plot_100_dma_img,
                 'plot_200_dma_img': plot_200_dma_img,
-                'plot_prediction': plot_prediction,
-                'mse': mse,
-                'rmse': rmse,
-                'r2': r2
+                'plot_prediction': plot_prediction
                 })
